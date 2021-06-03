@@ -1,0 +1,73 @@
+<div id="table" style="margin-left:100px">
+    <table style="width: 20%">
+      <tr>
+      <th>Vakcode</th>
+      <th>ECTS</th>
+      <th>Datum behaald</th>
+    </tr>
+    <tr>
+      <td><input type="text" name="fname" /></td>
+      <td><input type="number" name="code" /></td>
+      <td><input type="date" name="date"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="fname" /></td>
+      <td><input type="number" name="code" /></td>
+      <td><input type="date" name="date"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="fname" /></td>
+      <td><input type="number" name="code" /></td>
+      <td><input type="date" name="date"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="fname" /></td>
+      <td><input type="number" name="code" /></td>
+      <td><input type="date" name="date"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="fname" /></td>
+      <td><input type="number" name="code" /></td>
+      <td><input type="date" name="date"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="fname" /></td>
+      <td><input type="number" name="code" /></td>
+      <td><input type="date" name="date"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="fname" /></td>
+      <td><input type="number" name="code" /></td>
+      <td><input type="date" name="date"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="fname" /></td>
+      <td><input type="number" name="code" /></td>
+      <td><input type="date" name="date"></td>
+    </tr>
+  </table>
+  <br />
+  <button onclick="popUp()" class="myBtn" type="button">Bereken studietempo</button>
+  <br />
+  Total is : <span id="sum"></span>
+  <script type="text/javascript">
+  
+    function Calculate() {
+        var table = document.getElementById('table');
+        var items = table.getElementsByTagName('input');
+        var sum = 0;
+        for (var i = 0; i < items.length; i ++)
+          sum += items[i].type == 'number' && ! isNaN(parseInt(items[i].value)) ? parseInt(items[i].value) : 0;
+        var output = document.getElementById('sum');
+        output.innerHTML = sum;
+        return sum;
+    }
+  
+    function popUp() {
+      total = Calculate();
+      alert("Average " + total + "ECTS behaald." );
+    }
+  
+  
+  </script>
+  
